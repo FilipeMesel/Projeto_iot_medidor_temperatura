@@ -8,11 +8,18 @@ Projeto consiste em um sistema completo composto por hardware elaborado com ESP 
 ## ESP 32
 O ESP32 é um microcontrolador de baixo custo e baixo consumo de energia que pertence à família de chips ESP (Espressif Systems Platform). Ele é amplamente utilizado para projetos de IoT (Internet das Coisas), automação residencial e uma variedade de outras aplicações em que a conectividade Wi-Fi e Bluetooth é necessária.
 
+Abaixo, apresento detalhes do hardware
+[FOTO DO HARDWARE]
+
 ## DS18B20
 Sensor de temperatura a prova d'água utilizado
 
 ## DJANGo
 Framework python usado para elaboração de aplicações Fullstack usando o conceito de MVC
+
+Abaixo, apresento detalhes do sistema
+[FOTO DO SITE DJANGO]
+[EXPLICAR CADA UMA DAS FOTOS]
 
 # Objetivo do projeto
 Consolidar o alinhamento entre o que aprendi nas formações Python e HTML da DIO com o que venho utilizando ao longo do meu curso de mestrado.
