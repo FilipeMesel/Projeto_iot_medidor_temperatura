@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build/CMakeFiles/bootloader
+C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build/CMakeFiles/bootloader.rule
+C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build/CMakeFiles/bootloader-complete.rule
+C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

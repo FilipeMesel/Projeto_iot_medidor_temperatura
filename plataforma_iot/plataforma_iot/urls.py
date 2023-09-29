@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('cadastrar-dispositivo/', views.cadastrar_dispositivo, name='cadastrar_dispositivo'),
     path('listar-dispositivos/', views.listar_dispositivos, name='listar_dispositivos'),
+    path('atualizar-dados-dispositivo/', views.atualizar_dados_dispositivo, name='atualizar_dados_dispositivo'),
     # Adicione outras URLs conforme necessário
 ]
