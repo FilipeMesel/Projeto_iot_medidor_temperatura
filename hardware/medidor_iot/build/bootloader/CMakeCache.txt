@@ -248,7 +248,7 @@ IDF_TOOLCHAIN:STRING=gcc
 PROJECT_SOURCE_DIR:UNINITIALIZED=C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot
 
 //No help, variable specified on the command line.
-PYTHON:UNINITIALIZED=C:/esp/tools/Espressif/python_env/idf5.0_py3.8_env/Scripts/python.exe
+PYTHON:UNINITIALIZED=C:/esp/tools/Espressif/python_env/idf5.0_py3.10_env/Scripts/python.exe
 
 //No help, variable specified on the command line.
 PYTHON_DEPS_CHECKED:UNINITIALIZED=1

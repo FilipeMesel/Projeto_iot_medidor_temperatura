@@ -27,5 +27,36 @@ Consolidar o alinhamento entre o que aprendi nas formações Python e HTML da DI
 # O que preciso saber para rodar esse projeto
 É preciso saber um pouco de C++ para rodar o código ESP-IDF e um pouco de Python Django com HTML e conceitos de bancos de dados relacionais.
 
+# Como rodar esse projeto
+
+## Projeto Django
+
+Navegue até o diretório do código, descubra o ip do seu PC, vá até "settings.py" e procure por "ALLOWED_HOSTS".
+
+Nesse trecho do código, adicione o ip do seu computador, além do localhost
+
+ALLOWED_HOSTS = ['SEU IP', 'localhost', '127.0.0.1']
+
+Após isso, execute:
+
+    python manage.py makemigrations
+    python manage.py migrate
+    python manage.py runserver 0.0.0.0:8000
+
+Caso queira cadastrar um novo device, vá em:
+
+    localhost:8000/cadastrar-dispositivo/
+
+Caso queira visualizar os dados:
+
+    localhost:8000/listar-dispositivos/
+
+## Projeto ESP-IDF
+
+Navegue até o diretório do código e adicione os dados da rede wifi e senha usando o arquivo "my_data.h"
+
+Após, no CMD, digite "idf.py build" e "idf.py -p [PORTA COM] flash monitor"
+
+
 # Licença
 Esse projeto não tem licença, todos estão livres para comentar, discutir e me replicar meu projeto.

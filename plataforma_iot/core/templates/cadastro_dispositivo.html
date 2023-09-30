@@ -1,21 +1,47 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Dispositivo IoT</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+
+    
 </head>
 <body>
-    <h1>Cadastro de Dispositivo IoT</h1>
-    <form method="post" action="{% url 'cadastrar_dispositivo' %}">
-        {% csrf_token %}
-        <label for="serialNumber">Número de Série:</label>
-        <input type="text" name="serialNumber" required><br>
 
-        <label for="dados">Dados (JSON):</label>
-        <textarea name="dados" rows="4" cols="50"></textarea><br>
+    <div class="wrapper">
+        <div class="menu">
+            <!-- Aqui vai o seu menu -->
+            <ul>
+                <li><a href="http://localhost:8000/listar-dispositivos/">Listar</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="header">
+                <!-- Aqui vai o seu header -->
+                Header
+            </div>
+            <div class="content">
+                <h1>Cadastro de Dispositivo IoT</h1>
+                
+                <form class="green-form" method="post" action="{% url 'cadastrar_dispositivo' %}">
+                    {% csrf_token %}
+                    <label for="serialNumber">Número de Série:</label>
+                    <input type="text" name="serialNumber" required><br>
 
-        <button type="submit">Cadastrar Dispositivo</button>
-    </form>
+                    <label for="dados">Dados (JSON):</label>
+                    <textarea name="dados" rows="4" cols="50"></textarea><br>
+
+                    <button type="submit">Cadastrar Dispositivo</button>
+                </form>
+            </div>
+            <div class="footer">
+                <!-- Aqui vai o seu rodapé -->
+                Todos os direitos reservados - Plataforma IoT Django<sup>R</sup>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,31 +1,62 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listagem de Dispositivos IoT</title>
+    <title>Listagem de dispositivos IoT</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+
+    
 </head>
 <body>
-    <h1>Listagem de Dispositivos IoT</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Número de Série</th>
-                <th>Dados</th>
-                <th>Timestamp</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for dispositivo in dispositivos %}
-            <tr>
-                <td>{{ dispositivo.id }}</td>
-                <td>{{ dispositivo.serialNumber }}</td>
-                <td>{{ dispositivo.dados }}</td>
-                <td>{{ dispositivo.timestamp }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <div class="wrapper">
+        <div class="menu">
+            <!-- Aqui vai o seu menu -->
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="http://localhost:8000/cadastrar-dispositivo/">Cadastrar</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="header">
+                <!-- Aqui vai o seu header -->
+                <h1>Plataforma IoT Usando DJango e ESP32</h1>
+            </div>
+            <div class="content">
+                <table summary="dispositivos"  border="1" width="500" align="center">
+                    <caption><h1>Devices IoT</h1></caption>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Número de Série</th>
+                            <th>Dados</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for dispositivo in dispositivos %}
+                        <tr>
+                            <td>{{ dispositivo.id }}</td>
+                            <td>{{ dispositivo.serialNumber }}</td>
+                            <td>{{ dispositivo.dados }}</td>
+                            <td>{{ dispositivo.timestamp }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="footer">
+                <!-- Aqui vai o seu rodapé -->
+                Todos os direitos reservados - Plataforma IoT Django<sup>R</sup>
+            </div>
+        </div>
+    </div><script>
+        // Recarrega a página a cada 1 segundo
+        setTimeout(function() {
+            location.reload();
+        }, 1000); // 1000 milissegundos = 1 segundo
+    </script>
 </body>
 </html>

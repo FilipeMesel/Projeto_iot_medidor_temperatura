@@ -1,0 +1,81 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\pythonProjects\Projeto_iot_medidor_temperatura\hardware\medidor_iot\build\bootloader\esp-idf\esptool_py && C:\esp\tools\Espressif\python_env\idf5.0_py3.10_env\Scripts\python.exe C:/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build/bootloader/bootloader.bin"
+Bootloader binary size 0x66e0 bytes. 0x920 bytes (8%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable medidor_iot.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.6.2
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build/medidor_iot.bin
+[7/8] cmd.exe /C "cd /D C:\pythonProjects\Projeto_iot_medidor_temperatura\hardware\medidor_iot\build\esp-idf\esptool_py && C:\esp\tools\Espressif\python_env\idf5.0_py3.10_env\Scripts\python.exe C:/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build/partition_table/partition-table.bin C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build/medidor_iot.bin"
+medidor_iot.bin binary size 0xccea0 bytes. Smallest app partition is 0x100000 bytes. 0x33160 bytes (20%) free.
+[7/8] cmd.exe /C "cd /D C:\esp\esp-idf\components\esptool_py && C:\esp\tools\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/esp/esp-idf -D SERIAL_TOOL=C:/esp/tools/Espressif/python_env/idf5.0_py3.10_env/Scripts/python.exe;;C:/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/pythonProjects/Projeto_iot_medidor_temperatura/hardware/medidor_iot/build -P C:/esp/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool esp32 -p COM13 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 medidor_iot.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.6.2
+Serial port COM13
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: a0:b7:65:49:97:8c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000dcfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26336 bytes to 16390...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076e0... (100 %)
+Wrote 26336 bytes (16390 compressed) at 0x00001000 in 0.9 seconds (effective 241.0 kbit/s)...
+Hash of data verified.
+Compressed 839328 bytes to 539939...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001ad9e... (6 %)
+Writing at 0x000252d1... (9 %)
+Writing at 0x0002a7a6... (12 %)
+Writing at 0x000334af... (15 %)
+Writing at 0x0003ac7f... (18 %)
+Writing at 0x0004060a... (21 %)
+Writing at 0x000460b8... (24 %)
+Writing at 0x0004ba3e... (27 %)
+Writing at 0x000514a9... (30 %)
+Writing at 0x0005722b... (33 %)
+Writing at 0x0005ccb9... (36 %)
+Writing at 0x00061e89... (39 %)
+Writing at 0x000672dc... (42 %)
+Writing at 0x0006c6c8... (45 %)
+Writing at 0x00071c93... (48 %)
+Writing at 0x000774b6... (51 %)
+Writing at 0x0007d2b8... (54 %)
+Writing at 0x00082c3e... (57 %)
+Writing at 0x000881c1... (60 %)
+Writing at 0x0008daa7... (63 %)
+Writing at 0x00093394... (66 %)
+Writing at 0x00098a87... (69 %)
+Writing at 0x0009e3ac... (72 %)
+Writing at 0x000a47a6... (75 %)
+Writing at 0x000a9e2d... (78 %)
+Writing at 0x000b0399... (81 %)
+Writing at 0x000b5a67... (84 %)
+Writing at 0x000bb579... (87 %)
+Writing at 0x000c19a8... (90 %)
+Writing at 0x000cbfda... (93 %)
+Writing at 0x000d21b5... (96 %)
+Writing at 0x000d7b24... (100 %)
+Wrote 839328 bytes (539939 compressed) at 0x00010000 in 12.3 seconds (effective 546.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 579.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
